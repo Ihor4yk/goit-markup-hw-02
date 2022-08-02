@@ -9,6 +9,32 @@
 	--typical-lh: 1.14;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding-left: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+address {
+	font-style: normal;
+}
+img {
+	display: block;
+}
+
 body {
 	font-family: "Roboto", sans-serif;
 }
@@ -19,6 +45,15 @@ body {
 
 .link {
 	text-decoration: none;
+}
+
+.container {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -44,6 +79,29 @@ body {
 
 /* Секція header */
 
+.header {
+	padding-top: 24px;
+	padding-bottom: 25px;
+}
+
+.header-list {
+	display: flex;
+	column-gap: 50px;
+}
+
+.header .container {
+	display: flex;
+	align-items: center;
+}
+
+.header-group {
+	display: flex;
+}
+
+.header-connect {
+	margin-left: auto;
+}
+
 .header-logo {
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
@@ -51,6 +109,11 @@ body {
 	line-height: 1.19;
 	letter-spacing: 0.03em;
 	color: var(--main-logo-color);
+	margin-right: 93px;
+}
+
+.header-colortext {
+	color: #000000;
 }
 
 .header-link {
@@ -67,6 +130,7 @@ body {
 	line-height: var(--typical-lh);
 	letter-spacing: 0.02em;
 	color: var(--main-contact-color);
+	margin-right: 50px;
 }
 
 .header-tel {
@@ -96,6 +160,8 @@ body {
 
 .hero {
 	background-color: var(--hero-footer-background-color);
+	padding-top: 200px;
+	padding-bottom: 200px;
 }
 
 .hero-title {
@@ -106,9 +172,13 @@ body {
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	color: #ffffff;
+	max-width: 696px;
+	margin: 0 auto;
 }
 
 .hero-btn {
+	min-width: 216px;
+	height: 50px;
 	font-family: inherit;
 	font-weight: 700;
 	font-size: 16px;
@@ -120,9 +190,24 @@ body {
 	color: #ffffff;
 	background-color: #2196f3;
 	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
 }
 
 /* Cекція about */
+
+.about-list {
+	display: flex;
+	column-gap: 30px;
+}
+
+.about {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
 
 .about-title {
 	font-weight: 700;
@@ -131,6 +216,7 @@ body {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--main-title-color);
+	margin-bottom: 10px;
 }
 
 .about-text {
@@ -140,20 +226,37 @@ body {
 	color: var(--main-text-color);
 }
 
+.about-item {
+	max-width: 270px;
+}
+
 /* Cекція employment */
+
+.employment-list {
+	display: flex;
+	column-gap: 30px;
+}
+
+.employment {
+	padding-bottom: 94px;
+}
 
 .employment-title {
 	color: var(--main-title-color);
+	margin-bottom: 50px;
 }
 
 /* Cекція portfolio */
 
 .portfolio {
 	background-color: #f5f4fa;
+	padding-top: 94px;
+	padding-bottom: 94px;
 }
 
 .portfolio-title {
 	color: var(--main-title-color);
+	margin-bottom: 50px;
 }
 
 .portfolio-title-name {
@@ -163,6 +266,7 @@ body {
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--main-title-color);
+	margin-top: 30px;
 }
 
 .portfolio-text {
@@ -171,12 +275,26 @@ body {
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--main-text-color);
+	margin-top: 10px;
+}
+
+.portfolio-list {
+	display: flex;
+	column-gap: 30px;
+}
+
+.portfolio-item {
+	width: calc((100% - 30px) / 4);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
 }
 
 /* Cекція footer */
 
 .footer {
 	background-color: var(--hero-footer-background-color);
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .footer-logo {
@@ -186,6 +304,11 @@ body {
 	line-height: 1.19;
 	letter-spacing: 0.03em;
 	color: var(--main-logo-color);
+	margin-bottom: 20px;
+}
+
+.footer-colortext {
+	color: #ffffff;
 }
 
 .footer-address {
@@ -206,7 +329,20 @@ body {
 	color: rgba(255, 255, 255, 0.6);
 }
 
-/* Cекція Портфоліо (другий макет) */
+.footer-container-logo {
+	margin-bottom: 20px;
+}
+
+/* Портфоліо (другий макет) */
+
+.information {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.information-container-button {
+	margin-bottom: 50px;
+}
 
 .information-btn {
 	font-weight: 500;
@@ -230,6 +366,7 @@ body {
 	line-height: 2;
 	letter-spacing: 0.06em;
 	color: var(--main-title-color);
+	margin-top: 20px;
 }
 
 .information-text {
@@ -237,4 +374,21 @@ body {
 	line-height: 1.88;
 	letter-spacing: 0.03em;
 	color: var(--main-text-color);
+	margin-top: 4px;
+}
+
+.information-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+}
+
+.information-container-img {
+	border: 1px solid #eeeeee;
+}
+
+.information-item-img {
+	width: 370px;
+	border: 1px solid #eeeeee;
 }
